@@ -1,0 +1,16 @@
+<div>
+  <label>
+    <input
+      type="checkbox"
+      [(ngModel)]="isSwitchOn"
+      (change)="onSwitchChange()"
+    />
+    Enable Number Input
+  </label>
+  <input
+    type="number"
+    [(ngModel)]="numberValue"
+    [disabled]="!isSwitchOn"
+    (ngModelChange)="onNumberChange($event)"
+  />
+</div>
